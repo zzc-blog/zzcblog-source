@@ -8,7 +8,6 @@ tags:
   - JWT
 cover: /img/cover/java.jpg
 ---
-[toc]
 
 ## 1. 什么是 JWT
 `JWT`（JSON Web Token）是一种基于`JSON`的开放标准（RFC 7519），用于在各方之间以紧凑且自包含的方式安全传输信息。它通常用于身份认证和信息交换，由三部分组成：`Header`（头部）、`Payload`（载荷）和 `Signature`（签名），格式为 `xxxxx.yyyyy.zzzzz`。
