@@ -15,3 +15,4 @@ cover: /img/cover/database.jpg
 
 
 
+## 2. 安装 Mysql
