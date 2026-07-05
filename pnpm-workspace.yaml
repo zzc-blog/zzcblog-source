@@ -1,0 +1,7 @@
+allowBuilds:
+  bun: false
+  esbuild: false
+  hexo-deployer-wrangler: true
+  hexo-util: true
+  sharp: false
+  workerd: false

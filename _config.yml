@@ -117,10 +117,10 @@ feed:
 
 url: https://blog.zzc.dpdns.org
 deploy:
-  type: git
-  repo: git@github.com:zzc-blog/zzc-blog.github.io.git
-  branch: gh-pages
-  message: 'Site updated: {{ now("yyyy-MM-dd HH:mm:ss") }}' 
+  type: wrangler
+  target: pages
+  project_name: zzcblog
+  commit_dirty: true   # 添加这一行即可消除警告[reference:3]
 
 skip_render:
   - 'CNAME'
