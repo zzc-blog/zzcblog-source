@@ -116,11 +116,6 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 
 url: https://blog.zzc.dpdns.org
-deploy:
-  type: wrangler
-  target: pages
-  project_name: zzcblog
-  commit_dirty: true   # 添加这一行即可消除警告[reference:3]
 
 skip_render:
   - 'CNAME'
