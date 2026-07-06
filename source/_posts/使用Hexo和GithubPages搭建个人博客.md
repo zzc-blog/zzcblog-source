@@ -2,6 +2,8 @@
 title: 《从零到一：我用 Hexo + GitHub Pages 搭了一个博客》
 date: 2026-07-06 11:30:24
 categories:
+  - 技术
+  - 其他
 tags: [Hexo, GitHub]
 ---
 
