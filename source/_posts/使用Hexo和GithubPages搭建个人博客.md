@@ -992,7 +992,7 @@ hexo d  → 推到 gh-pages 分支 → GitHub Pages 托管
 
 问题点：hexo g && hexo d 每次都会删除 public 文件夹，重新上传，并重新推送到 github，导致 CNAME 文件删除
 
-解决方法： 在 source 目录下新建一个 CNAME 文件，每次 hexo g 会自动添加到 public 文件夹里，hexo d 会上传这个文件，CNAME 就不会被删除，github就不会每次提交都会重新设置自定义域名
+解决方法： 在 source 目录下新建一个 CNAME 文件，每次 hexo g 会自动添加到 public 文件夹里，hexo d 会上传这个文件，CNAME 就不会被删除，github 就不会每次提交都会重新设置自定义域名
 
 ![image-20260706124857676](https://hexo-1304867193.cos.ap-guangzhou.myqcloud.com/images/d3409ea739a2d9b6542a69f03c685e84.png)
 
@@ -1012,19 +1012,19 @@ https://zzcblog.ccwu.cc/
 | ----------------------------------------- | --------------------------------------------- | ----------------------------------- |
 | **单文件硬上限（不走 LFS）**              | **100 MB**，超了直接拒                        | 50 MB 以上给 warning 还能传         |
 | **单文件硬上限（走 LFS）**                | Free/Pro **2 GB**，Team 4 GB，Enterprise 5 GB |                                     |
-| **仓库推荐大小**                          | **< 1 GB**，官方"强烈建议 < 5 GB"             | 超了 clone 慢，support 可能来找你聊 |
+| **仓库推荐大小**                          | **< 1 GB**，官方 "强烈建议 < 5 GB"             | 超了 clone 慢，support 可能来找你聊 |
 | **浏览器上传**                            | ≤ 25 MB                                       | 网页拖拽的上限比 git push 严        |
 | **GitHub Free LFS 免费额度（2026 当前）** | **10 GiB 存储 + 10 GiB/月带宽**               | 老文章写的 1GB 是旧口径，已涨       |
 
 > 💡 10 GiB 存储 + 10 GiB 月带宽对个人博客图床其实够用了——博客插图单张通常 200KB~2MB，10 GiB 能塞几千张。但要注意：**带宽按月重置，超了当月 LFS 就被禁用**，读者刷你图刷超了会 403。
 
-虽然可以存储图片，但是在用typora写文章时，需要插入图片，需要在本地存储图片，很麻烦
+虽然可以存储图片，但是在用 typora 写文章时，需要插入图片，需要在本地存储图片，很麻烦
 
-鉴于 这种情况，hexo 不会自动将 ./${filename}.assets 文件夹下的图片自动复制到 public下
+鉴于 这种情况，hexo 不会自动将 ./${filename}.assets 文件夹下的图片自动复制到 public 下
 
 ![image-20260706125801883](https://hexo-1304867193.cos.ap-guangzhou.myqcloud.com/images/d3c126cb9ce195ad6ac70738ace78eaf.png)
 
-解决方法：编写一个 hexo的 脚本 `fix-asset-paths.js` ，转换图片地址，才能正常访问，改脚本在 hexo g 时会被执行
+解决方法：编写一个 hexo 的 脚本 `fix-asset-paths.js` ，转换图片地址，才能正常访问，改脚本在 hexo g 时会被执行
 
 ```js
 /**
@@ -1039,9 +1039,9 @@ function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// ============================
+// ==== ==== ==== ==== ==== ==== ====
 // 1. 将 .assets 图片注册为 Hexo 生成文件
-// ============================
+// ==== ==== ==== ==== ==== ==== ====
 hexo.extend.generator.register('typora_assets', function (locals) {
   const sourcePostsDir = path.join(hexo.source_dir, '_posts');
   const result = [];
@@ -1070,9 +1070,9 @@ hexo.extend.generator.register('typora_assets', function (locals) {
   return result;
 });
 
-// ============================
+// ==== ==== ==== ==== ==== ==== ====
 // 2. 修正 HTML 中图片路径
-// ============================
+// ==== ==== ==== ==== ==== ==== ====
 hexo.extend.filter.register('after_post_render', function (data) {
   const slug = data.slug;
   if (!slug) return data;
@@ -1139,8 +1139,8 @@ COS 基础资源包
 
 | **方向**                          | **收费？**                     | **说明**                                                     |
 | :-------------------------------- | :----------------------------- | :----------------------------------------------------------- |
-| 外网**下行**（COS → 公网）        | **收费**                       | 就是读者看图、你下载文件这段                                 |
-| 外网**上行**（公网 → COS）        | **免费**                       | PicGo 传图上去那段不收流量钱                                 |
+| 外网 **下行**（COS → 公网）        | **收费**                       | 就是读者看图、你下载文件这段                                 |
+| 外网 **上行**（公网 → COS）        | **免费**                       | PicGo 传图上去那段不收流量钱                                 |
 | 同地域内网（CVM/云函数 → COS）    | 免费                           | 你博客如果部署在腾讯云 CVM 同地域拉 COS，不走外网下行        |
 | CDN 回源（COS → 腾讯云 CDN 节点） | 单独计费项，**比外网下行便宜** | 挂了 CDN 后，读者命中 CDN 就不走 COS 下行了，只 CDN 侧出流量 |
 
@@ -1155,7 +1155,7 @@ COS 基础资源包
 
 **省流量的两个方向**
 
-1. **挂 CDN**：COS 作为 CDN 源站，读者第一次访问 CDN 没命中才回源到 COS（走"CDN 回源流量"，比外网下行便宜），后续直接 CDN 节点出。每月 PV 几千以下其实没必要，PV 上万再考虑。
+1. **挂 CDN**：COS 作为 CDN 源站，读者第一次访问 CDN 没命中才回源到 COS（走 "CDN 回源流量"，比外网下行便宜），后续直接 CDN 节点出。每月 PV 几千以下其实没必要，PV 上万再考虑。
 2. **外网下行流量包**：腾讯云有卖（比如 100GB/年 十几块钱），比按量 0.15 元/GB 划算，你博客现在这个量级买个最小档够用一年。
 
 **价格对照（境内标准存储）**

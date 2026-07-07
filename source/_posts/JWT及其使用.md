@@ -10,7 +10,7 @@ cover: /img/cover/java.jpg
 ---
 
 ## 1. 什么是 JWT
-`JWT`（JSON Web Token）是一种基于`JSON`的开放标准（RFC 7519），用于在各方之间以紧凑且自包含的方式安全传输信息。它通常用于身份认证和信息交换，由三部分组成：`Header`（头部）、`Payload`（载荷）和 `Signature`（签名），格式为 `xxxxx.yyyyy.zzzzz`。
+`JWT`（JSON Web Token）是一种基于 `JSON` 的开放标准（RFC 7519），用于在各方之间以紧凑且自包含的方式安全传输信息。它通常用于身份认证和信息交换，由三部分组成：`Header`（头部）、`Payload`（载荷）和 `Signature`（签名），格式为 `xxxxx.yyyyy.zzzzz`。
 
 ## 2. 使用 JWT
 下面从依赖引入开始，逐步搭建 JWT 工具类。
@@ -152,14 +152,14 @@ public class JwtUtils {
 创建一个空的 JWT 构建器对象，准备往里塞东西。
 
 **2. 数据装载区（谁、是什么）**
-- `.subject(userId)`：将用户 ID 存入标准字段 `sub`（Subject），告诉系统"这个令牌代表谁"。
+- `.subject(userId)`：将用户 ID 存入标准字段 `sub`（Subject），告诉系统 "这个令牌代表谁"。
 - `.claim("role", role)`：存入自定义字段 `role`，通常用于存角色、权限或用户昵称。
 
 这两行最终会变成 JWT 载荷（Payload）中的 `{"sub":"10001", "role":"admin"}`。
 
 **3. 时间控制区（生效与失效）**
 - `.issuedAt(new Date())`：设置签发时间 `iat`（Issued At），取当前系统时间，用于记录 Token 何时生成。
-- `.expiration(new Date(System.currentTimeMillis() + EXPIRE))`：设置过期时间 `exp`（Expiration），在当前时间上加上预设时长（如 `EXPIRE = 3600000` 毫秒即 1 小时），告诉系统"到这个时间点后，Token 就作废"。
+- `.expiration(new Date(System.currentTimeMillis() + EXPIRE))`：设置过期时间 `exp`（Expiration），在当前时间上加上预设时长（如 `EXPIRE = 3600000` 毫秒即 1 小时），告诉系统 "到这个时间点后，Token 就作废"。
 
 **4. 加密签名区（防伪认证）**
 - `.signWith(getKey())`：使用密钥对头部（Header）和载荷（Payload）进行加密签名。
@@ -175,7 +175,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDAwMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxODAwMDA
 
 > **⚠️ 特别注意（避坑指南）**
 > - **密钥长度**：务必确保密钥字符串长度 >= 32 个字符。如果低于 32 位，`signWith()` 执行时会抛出 `WeakKeyException` 异常导致生成失败。
-> - **`compact()` 只能调用一次**：构建器在调用 `compact()` 后即被"消费"，无法再次修改或重新生成。如果后续想调整过期时间，必须重新调用 `Jwts.builder()` 新建一个对象。
+> - **`compact()` 只能调用一次**：构建器在调用 `compact()` 后即被 "消费"，无法再次修改或重新生成。如果后续想调整过期时间，必须重新调用 `Jwts.builder()` 新建一个对象。
 
 ### 解析端逐行拆解
 
@@ -197,7 +197,7 @@ Jwts.parser().verifyWith(getKey()).build().parseSignedClaims(token).getPayload()
 > 注：新版本 API 已废弃旧版的 `setSigningKey()`，强制使用 `verifyWith()`，语义更明确（专门用于验证）。
 
 **3. `.build()` —— 组装验钞机**
-将前面设置的密钥等配置"固化"成一个不可变的解析器实例。这一步只是准备，尚未开始实际解析。
+将前面设置的密钥等配置 "固化" 成一个不可变的解析器实例。这一步只是准备，尚未开始实际解析。
 
 **4. `.parseSignedClaims(token)` —— 拆信封并验真伪（最关键的触发点）**
 这是真正干活的一行，内部会按顺序做三件大事：
@@ -208,7 +208,7 @@ Jwts.parser().verifyWith(getKey()).build().parseSignedClaims(token).getPayload()
 如果以上任何一步失败，整行代码都会抛出异常，程序会直接跳转到你的 `catch` 块中。
 
 **5. `.getPayload()` —— 读取信纸内容（获取数据）**
-一旦过了上面那道"安检门"，这行代码就很简单了：直接返回载荷（Payload）中的 `Claims` 对象（可以理解为一个 Map/字典）。拿到这个 `Claims` 后，就可以通过 `.getSubject()` 或 `.get("role")` 来读取之前存入的用户 ID 和角色信息了。
+一旦过了上面那道 "安检门"，这行代码就很简单了：直接返回载荷（Payload）中的 `Claims` 对象（可以理解为一个 Map/字典）。拿到这个 `Claims` 后，就可以通过 `.getSubject()` 或 `.get("role")` 来读取之前存入的用户 ID 和角色信息了。
 
 ### 生成 vs 解析对照表
 
@@ -222,7 +222,7 @@ Jwts.parser().verifyWith(getKey()).build().parseSignedClaims(token).getPayload()
 ### 特别注意（一定要记住）
 
 **1. `verifyWith` 必须和 `signWith` 密钥相同**
-这一点至关重要。一个密钥负责"签封"，另一个必须用完全相同的密钥来"拆封"，否则验签必失败。
+这一点至关重要。一个密钥负责 "签封"，另一个必须用完全相同的密钥来 "拆封"，否则验签必失败。
 
 **2. 异常处理必须精确**
 因为 `.parseSignedClaims(token)` 会抛出多种异常，在实际项目中，强烈建议在 `catch` 块中区分异常类型，以便给前端返回不同的提示：
