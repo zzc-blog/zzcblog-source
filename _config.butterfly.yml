@@ -253,7 +253,8 @@ readmode: true
 darkmode:
   enable: true
   button: true
-  autoChangeMode: 1
+  autoChangeMode: 0       # 0=不自动切换，全靠手动点击
+  default_mode: light     # 新增这行，强制初始为亮色
   start:
   end:
 
