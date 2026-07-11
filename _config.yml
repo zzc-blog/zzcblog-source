@@ -166,17 +166,6 @@ auto_front_matter:
     enable: true
 
   # ---- 自动封面 ----
-  # 根据最深层的分类名称匹配封面图片路径
+  # 禁用插件 auto_cover，由 scripts/auto-cover.js 统一处理
   auto_cover:
-    enable: true
-    per_category:
-      # 格式：父分类: { 子分类: 图片路径 }
-      技术:
-        Java: /img/cover/java.jpg
-        数据库: /img/cover/database.jpg
-        前端: /img/cover/frontend.jpg
-        工具: /img/cover/tools.jpg
-        其他: /img/cover/other.jpg
-      生活:
-        随笔: /img/cover/essay.jpg
-        阅读: /img/cover/reading.jpg
+    enable: false

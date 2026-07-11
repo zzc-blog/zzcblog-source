@@ -2,14 +2,12 @@
 title: JVM学习
 date: 2026-07-05 14:34:24
 categories:
-  - 技术
   - Java
 tags:
   - JVM
   - Java
   - JVM原理
   - 内存管理
-cover: /img/cover/java.jpg
 ---
 
 ## 1. 什么是JVM

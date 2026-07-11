@@ -2,11 +2,9 @@
 title: JWT及其使用
 date: 2026-07-05 18:24:30
 categories:
-  - 技术
   - Java
 tags:
   - JWT
-cover: /img/cover/java.jpg
 ---
 
 ## 1. 什么是 JWT

@@ -2,7 +2,6 @@
 title: JDK 工具
 date: 2026-07-10 19:24:57
 categories:
-  - 技术
   - Java
 tags: [JDK, javac, javap]
 ---

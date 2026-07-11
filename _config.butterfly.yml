@@ -62,7 +62,9 @@ cover:
   aside_enable: true
   archives_enable: true
   default_cover:
-    - /img/cover/java.jpg
+    - /img/cover/java-1.jpg
+    - /img/cover/java-2.jpg
+    - /img/cover/java-3.jpg
     - /img/cover/database.jpg
     - /img/cover/frontend.jpg
     - /img/cover/tools.jpg

@@ -2,7 +2,6 @@
 title: 使用Cloudflare部署Hexo个人博客
 date: 2026-07-06 13:20:30
 categories:
-  - 技术
   - 其他
 tags: [Cloudflare, Hexo]
 ---
