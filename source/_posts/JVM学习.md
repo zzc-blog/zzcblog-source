@@ -1,6 +1,5 @@
 ---
 title: JVM学习
-date: 2026-07-05 14:34:24
 categories:
   - Java
 tags:
@@ -8,6 +7,8 @@ tags:
   - Java
   - JVM原理
   - 内存管理
+abbrlink: f0242a65
+date: 2026-07-05 14:34:24
 ---
 
 ## 1. 什么是JVM

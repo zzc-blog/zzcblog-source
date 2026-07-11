@@ -1,10 +1,11 @@
 ---
 title: JWT及其使用
-date: 2026-07-05 18:24:30
 categories:
   - Java
 tags:
   - JWT
+abbrlink: 5d1b49c3
+date: 2026-07-05 18:24:30
 ---
 
 ## 1. 什么是 JWT

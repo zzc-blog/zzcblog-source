@@ -1,10 +1,11 @@
 ---
 title: String字符串
-date: 2026-07-07 11:02:37
 categories:
   - Java
 tags:
   - String
+abbrlink: ffb663c0
+date: 2026-07-07 11:02:37
 ---
 
 ## 1. 什么是 String

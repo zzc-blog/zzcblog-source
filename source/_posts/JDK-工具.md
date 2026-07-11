@@ -1,9 +1,13 @@
 ---
 title: JDK 工具
-date: 2026-07-10 19:24:57
 categories:
   - Java
-tags: [JDK, javac, javap]
+tags:
+  - JDK
+  - javac
+  - javap
+abbrlink: 7025a55b
+date: 2026-07-10 19:24:57
 ---
 
 ## 1. javac

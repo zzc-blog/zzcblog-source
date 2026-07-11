@@ -2,43 +2,67 @@
 
 /**
  * 自动封面脚本
- * 根据文章最深层的分类名匹配封面图片，支持数组实现随机封面。
+ * 所有分类从 cover 图片池中随机选取封面。
  * 优先级 11，在 hexo-auto-front-matter 插件之后运行。
- * 若分类未匹配到封面，则交给 Butterfly 主题的 default_cover 随机池。
  */
 
-const coverMap = {
-  Java: [
-    '/img/cover/java-1.jpg',
-    '/img/cover/java-2.jpg',
-    '/img/cover/java-3.jpg',
-  ],
-  数据库: '/img/cover/database.jpg',
-  前端: '/img/cover/frontend.jpg',
-  工具: '/img/cover/tools.jpg',
-  其他: '/img/cover/other.jpg',
-  随笔: '/img/cover/essay.jpg',
-  阅读: '/img/cover/reading.jpg',
-};
+// 所有封面图片池（共 27 张）
+const coverPool = [
+  '/img/cover/cover-01.jpg',
+  '/img/cover/cover-02.jpg',
+  '/img/cover/cover-03.png',
+  '/img/cover/cover-04.png',
+  '/img/cover/cover-05.jpg',
+  '/img/cover/cover-06.jpg',
+  '/img/cover/cover-07.jpg',
+  '/img/cover/cover-08.jpg',
+  '/img/cover/cover-09.jpg',
+  '/img/cover/cover-10.jpg',
+  '/img/cover/cover-11.jpg',
+  '/img/cover/cover-12.jpg',
+  '/img/cover/cover-13.jpg',
+  '/img/cover/cover-14.jpg',
+  '/img/cover/cover-15.png',
+  '/img/cover/cover-16.jpg',
+  '/img/cover/cover-17.jpg',
+  '/img/cover/cover-18.jpg',
+  '/img/cover/cover-19.webp',
+  '/img/cover/cover-20.webp',
+  '/img/cover/cover-21.webp',
+  '/img/cover/cover-22.jpg',
+  '/img/cover/cover-23.jpg',
+  '/img/cover/cover-24.jpg',
+  '/img/cover/cover-25.jpg',
+  '/img/cover/cover-26.jpg',
+  '/img/cover/cover-27.jpg',
+];
+
+// 记录最近使用的索引，避免连续重复
+const history = [];
+const maxHistory = 3;
+
+function getRandomCover() {
+  let index;
+  do {
+    index = Math.floor(Math.random() * coverPool.length);
+  } while (history.includes(index) && history.length < coverPool.length - 1);
+
+  history.push(index);
+  if (history.length > maxHistory) history.shift();
+
+  return coverPool[index];
+}
 
 hexo.extend.filter.register('before_post_render', function (data) {
   if (data.layout !== 'post') return data;
 
-  const categories = data.categories || [];
-  // 从最深层分类向浅层查找匹配
-  for (let i = categories.length - 1; i >= 0; i--) {
-    const cat = typeof categories[i] === 'string' ? categories[i] : categories[i].name;
-    const cover = coverMap[cat];
-    if (cover) {
-      if (Array.isArray(cover)) {
-        data.cover = cover[Math.floor(Math.random() * cover.length)];
-      } else {
-        data.cover = cover;
-      }
-      this.log.i('Auto cover [%s]: %s', data.title, data.cover);
-      return data;
-    }
-  }
+  let cats = data.categories;
+  if (!cats) return data;
+  if (typeof cats.toArray === 'function') cats = cats.toArray();
+  if (!Array.isArray(cats) || cats.length === 0) return data;
+
+  data.cover = getRandomCover();
+  this.log.i('Auto cover [%s]: %s', data.title, data.cover);
 
   return data;
 }, 11);

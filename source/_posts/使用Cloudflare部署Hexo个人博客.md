@@ -1,9 +1,12 @@
 ---
 title: 使用Cloudflare部署Hexo个人博客
-date: 2026-07-06 13:20:30
 categories:
   - 其他
-tags: [Cloudflare, Hexo]
+tags:
+  - Cloudflare
+  - Hexo
+abbrlink: 7d3dd794
+date: 2026-07-06 13:20:30
 ---
 
 ## 1. 使用 Cloudflare 托管域名

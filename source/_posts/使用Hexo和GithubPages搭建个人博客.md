@@ -1,9 +1,12 @@
 ---
 title: 《从零到一：我用 Hexo + GitHub Pages 搭了一个博客》
-date: 2026-07-06 11:30:24
 categories:
   - 其他
-tags: [Hexo, GitHub]
+tags:
+  - Hexo
+  - GitHub
+abbrlink: fc67d995
+date: 2026-07-06 11:30:24
 ---
 
 ## 1. 安装 Hexo
@@ -245,14 +248,14 @@ auto_front_matter:
     per_category:
       # 格式：父分类: { 子分类: 图片路径 }
       技术:
-        Java: /img/cover/java.jpg
-        数据库: /img/cover/database.jpg
-        前端: /img/cover/frontend.jpg
-        工具: /img/cover/tools.jpg
-        其他: /img/cover/other.jpg
+        Java: /img/cover/cover-01.jpg
+        数据库: /img/cover/cover-05.jpg
+        前端: /img/cover/cover-25.jpg
+        工具: /img/cover/cover-01.jpg
+        其他: /img/cover/cover-06.jpg
       生活:
-        随笔: /img/cover/essay.jpg
-        阅读: /img/cover/reading.jpg
+        随笔: /img/cover/cover-24.jpg
+        阅读: /img/cover/cover-27.jpg
 ```
 
 **package.json**
@@ -404,27 +407,30 @@ avatar:
   effect: true
 
 disable_top_img: false
-default_top_img: /img/index.jpg
-index_img: /img/cover/java.jpg
-archive_img: /img/index.jpg
-tag_img: /img/index.jpg
-category_img: /img/index.jpg
+default_top_img: /img/cover/cover-01.jpg
+index_img: /img/cover/cover-02.jpg
+archive_img: /img/cover/cover-03.png
+tag_img: /img/cover/cover-04.png
+category_img: /img/cover/cover-05.jpg
 
 footer_img: /img/footer-bg.svg
-background: /img/bg-day.svg
+background: /img/cover/cover-06.jpg
 
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   default_cover:
-    - /img/cover/java.jpg
-    - /img/cover/database.jpg
-    - /img/cover/frontend.jpg
-    - /img/cover/tools.jpg
-    - /img/cover/other.jpg
-    - /img/cover/essay.jpg
-    - /img/cover/reading.jpg
+    - /img/cover/cover-01.jpg
+    - /img/cover/cover-02.jpg
+    - /img/cover/cover-03.png
+    - /img/cover/cover-04.png
+    - /img/cover/cover-05.jpg
+    - /img/cover/cover-06.jpg
+    - /img/cover/cover-07.jpg
+    - /img/cover/cover-08.jpg
+    - /img/cover/cover-09.jpg
+    - /img/cover/cover-10.jpg
 
 error_img:
   flink: /img/error-page.svg
@@ -433,7 +439,7 @@ error_img:
 error_404:
   enable: true
   subtitle: '页面没有找到...'
-  background: /img/index.jpg
+  background: /img/cover/cover-07.jpg
 
 # ============================================================
 # 文章元数据 Post Meta
