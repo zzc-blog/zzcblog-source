@@ -11,13 +11,13 @@ date: 2026-07-06 13:20:30
 
 ## 1. 使用 Cloudflare 托管域名
 
-![image-20260706132419924](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/99520f82499ff60dba1fd288308c7171.png)
+![image-20260706132419924](https://img-proxy.zzc.dpdns.org/images/99520f82499ff60dba1fd288308c7171.png)
 
 ## 2. 使用 Pages
 
 新版没有 pages 选项
 
-![image-20260706132536006](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/a200f4d32736cec196b29e18d61178b3.png)
+![image-20260706132536006](https://img-proxy.zzc.dpdns.org/images/a200f4d32736cec196b29e18d61178b3.png)
 
 先使用工具 在 cloudflare 创建一个 pages
 
@@ -96,7 +96,8 @@ git add . && git commit -m "new post" && git push
 
 部署成功之后会有一个默认域名，也可以自定义域名，自定义的域名必须托管在 CF 里面
 
-![image-20260706134235049](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/8e633808a7b5fd2e36b7be20bad5318e.png)
+![image-20260706134235049](https://img-proxy.zzc.dpdns.org/images/8e633808a7b5fd2e36b7be20bad5318e.png)
+
 
 
 

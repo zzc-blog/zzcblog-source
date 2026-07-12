@@ -65,7 +65,7 @@ pnpm install
 
 初始化后，您的项目文件夹将如下所示：
 
-![image-20260706114155246](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/521559cf8f478195220a2daa3879f04b.png)
+![image-20260706114155246](https://img-proxy.zzc.dpdns.org/images/521559cf8f478195220a2daa3879f04b.png)
 
 ### 1.5 配置 _config.yml
 
@@ -348,11 +348,11 @@ auto_front_matter:
 
 这里使用 `butterfly` 主题
 
-![image-20260706114959529](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/fed349aca3bae88cc34806b94b5f0dc4.png)
+![image-20260706114959529](https://img-proxy.zzc.dpdns.org/images/fed349aca3bae88cc34806b94b5f0dc4.png)
 
 其中
 
-![image-20260706115108881](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/b84a2403bf8da0a20b1e1f1c51504f82.png)
+![image-20260706115108881](https://img-proxy.zzc.dpdns.org/images/b84a2403bf8da0a20b1e1f1c51504f82.png)
 
 _config.butterfly.yml 为 butterfly 主题配置文件
 
@@ -987,23 +987,23 @@ hexo d  → 推到 gh-pages 分支 → GitHub Pages 托管
 
 配置 自定义域名
 
-![image-20260706124136258](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/e7f948ec869a9e3d19d232f117e1053e.png)
+![image-20260706124136258](https://img-proxy.zzc.dpdns.org/images/e7f948ec869a9e3d19d232f117e1053e.png)
 
 以上部分都要设置，建议新建一个分支 gh-pages
 
 设置自定义域名之后，会自动新建一个 **CNAME** 文件
 
-![image-20260706124331521](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/8392ad3edeae12d62159855c9956db76.png)
+![image-20260706124331521](https://img-proxy.zzc.dpdns.org/images/8392ad3edeae12d62159855c9956db76.png)
 
 问题点：hexo g && hexo d 每次都会删除 public 文件夹，重新上传，并重新推送到 github，导致 CNAME 文件删除
 
 解决方法： 在 source 目录下新建一个 CNAME 文件，每次 hexo g 会自动添加到 public 文件夹里，hexo d 会上传这个文件，CNAME 就不会被删除，github 就不会每次提交都会重新设置自定义域名
 
-![image-20260706124857676](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/d3409ea739a2d9b6542a69f03c685e84.png)
+![image-20260706124857676](https://img-proxy.zzc.dpdns.org/images/d3409ea739a2d9b6542a69f03c685e84.png)
 
 上传之后 github 自动部署
 
-![image-20260706124946691](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/26341aa5d9f6be0ff9cb4534d9d70ae3.png)
+![image-20260706124946691](https://img-proxy.zzc.dpdns.org/images/26341aa5d9f6be0ff9cb4534d9d70ae3.png)
 
 然后就可以用自定义域名访问了
 
@@ -1027,7 +1027,7 @@ https://zzcblog.ccwu.cc/
 
 鉴于 这种情况，hexo 不会自动将 ./${filename}.assets 文件夹下的图片自动复制到 public 下
 
-![image-20260706125801883](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/d3c126cb9ce195ad6ac70738ace78eaf.png)
+![image-20260706125801883](https://img-proxy.zzc.dpdns.org/images/d3c126cb9ce195ad6ac70738ace78eaf.png)
 
 解决方法：编写一个 hexo 的 脚本 `fix-asset-paths.js` ，转换图片地址，才能正常访问，改脚本在 hexo g 时会被执行
 
@@ -1116,11 +1116,11 @@ hexo.extend.filter.register('after_post_render', function (data) {
 
 配置 Typora
 
-![image-20260706130351239](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/f8fb2645078633ee6455b7502e598e0c.png)
+![image-20260706130351239](https://img-proxy.zzc.dpdns.org/images/f8fb2645078633ee6455b7502e598e0c.png)
 
 配置 PicGo
 
-![image-20260706130634174](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/7366af40e0cbae6af474ed145ef4b35d.png)
+![image-20260706130634174](https://img-proxy.zzc.dpdns.org/images/7366af40e0cbae6af474ed145ef4b35d.png)
 
 配置好后就可以上传测试了
 
@@ -1128,17 +1128,17 @@ hexo.extend.filter.register('after_post_render', function (data) {
 
 **设置防盗刷，防止图片内嵌**
 
-![image-20260706131114158](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/09aea6c5b67be68c03604f0cfa66ebc3.png)
+![image-20260706131114158](https://img-proxy.zzc.dpdns.org/images/09aea6c5b67be68c03604f0cfa66ebc3.png)
 
 COS 基础资源包
 
-![image-20260706131251430](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/e64257d89759258b184fd173b2a5ed16.png)
+![image-20260706131251430](https://img-proxy.zzc.dpdns.org/images/e64257d89759258b184fd173b2a5ed16.png)
 
 **外网下行和请求上传都要额外计费**
 
-![image-20260706131328323](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/9eb476a536b1670880850b26e2bdd87f.png)
+![image-20260706131328323](https://img-proxy.zzc.dpdns.org/images/9eb476a536b1670880850b26e2bdd87f.png)
 
-![image-20260706131400300](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/e4a02fc4b26ffbadf4ee407a14b767bb.png)
+![image-20260706131400300](https://img-proxy.zzc.dpdns.org/images/e4a02fc4b26ffbadf4ee407a14b767bb.png)
 
 **具体如下**
 
@@ -1169,6 +1169,7 @@ COS 基础资源包
 | ---------------- | ---------------- | ----------------------------- |
 | 按量计费（裸用） | **0.5 元/GB**    | 没买流量包，直接从余额扣      |
 | 流量包抵扣       | 约 0.15 元/GB 起 | 100GB/年 大概 20 多块，摊下来 |
+
 
 
 

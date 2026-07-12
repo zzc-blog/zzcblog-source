@@ -76,7 +76,7 @@ String s2 = "hello";
 System.out.println(s1 == s2); // false
 ```
 
-![image-20260707113535201](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/901741d3ca3cb3c3be813d3a3f66d120.png)
+![image-20260707113535201](https://img-proxy.zzc.dpdns.org/images/901741d3ca3cb3c3be813d3a3f66d120.png)
 
 ```java
 String s1 = new String("hello");
@@ -88,7 +88,7 @@ System.out.println(s2 == s3); // true
 
 这里的 s1.intern() ，因为 "hello" 已经在常量池中，直接返回地址
 
-![image-20260707114057472](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/743e5bf675b1e06293c7b807830db8d6.png)
+![image-20260707114057472](https://img-proxy.zzc.dpdns.org/images/743e5bf675b1e06293c7b807830db8d6.png)
 
 ```java
 String s1 = new String("hello") + new String("world"); // 字符串常量池中不会生成 "helloworld" 对象
@@ -108,7 +108,7 @@ String s2 = "helloworld"; // 使用的是上一行代码放入的字符串对象
 System.out.println(s1 == s2); // jdk6: false // jdk7，8: true
 ```
 
-![image-20260707120832653](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/91d7531616271ed4bf02433221bef2f4.png)
+![image-20260707120832653](https://img-proxy.zzc.dpdns.org/images/91d7531616271ed4bf02433221bef2f4.png)
 
 **总结 String 的 intern()的使用：**
 
@@ -118,5 +118,6 @@ System.out.println(s1 == s2); // jdk6: false // jdk7，8: true
 如果没有，则会把对象的引用地址复制一份，放入串池，并返回串池中的引用地址
 
 只对于 `String s1 = new String("hello") + new String("world")` 这种情况
+
 
 
