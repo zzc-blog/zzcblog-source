@@ -146,29 +146,17 @@ public class Hello
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
 ```
 
-- 
+- **Classfile**：`.class`文件的路径。
 
-  **Classfile**：`.class`文件的路径。
+- **Last modified / size / MD5**：文件的修改时间、大小、MD5 校验值（`-sysinfo`也会输出）。
 
-- 
+- **Compiled from**：源文件名。
 
-  **Last modified / size / MD5**：文件的修改时间、大小、MD5 校验值（`-sysinfo`也会输出）。
+- **public class Hello**：类声明。
 
-- 
+- **minor/major version**：编译出的 class 文件格式版本。major 61 对应 Java 17。
 
-  **Compiled from**：源文件名。
-
-- 
-
-  **public class Hello**：类声明。
-
-- 
-
-  **minor/major version**：编译出的 class 文件格式版本。major 61 对应 Java 17。
-
-- 
-
-  **flags**：类的访问标志。`ACC_PUBLIC`表示类是公有的，`ACC_SUPER`表示该类使用 invokespecial 指令的新语义（JDK 1.0.2 之后默认都有）。
+- **flags**：类的访问标志。`ACC_PUBLIC`表示类是公有的，`ACC_SUPER`表示该类使用 invokespecial 指令的新语义（JDK 1.0.2 之后默认都有）。
 
 ------
 

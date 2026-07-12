@@ -1,4 +1,4 @@
----
+﻿---
 title: JWT及其使用
 categories:
   - Java
@@ -90,13 +90,13 @@ date: 2026-07-05 18:24:30
 ### 2.3 代码示例
 载荷
 
-![image-20260705183318753](https://hexo-1304867193.cos.ap-guangzhou.myqcloud.com/images/image-20260705183318753.png)
+![image-20260705183318753](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/image-20260705183318753.png)
 
 
 
-![image-20260705183359395](https://hexo-1304867193.cos.ap-guangzhou.myqcloud.com/images/image-20260705183359395.png)
+![image-20260705183359395](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/image-20260705183359395.png)
 
-![image-20260705183415020](https://hexo-1304867193.cos.ap-guangzhou.myqcloud.com/images/image-20260705183415020.png)
+![image-20260705183415020](https://fastly.jsdelivr.net/gh/zzc-blog/img-bed@main/images/image-20260705183415020.png)
 
 ```java
 import io.jsonwebtoken.Jwts;
@@ -247,3 +247,5 @@ try {
 - **确保版本号已定义**：`jjwt.version` 属性值在 `pom.xml` 里定义了（比如 `<jjwt.version>0.12.6</jjwt.version>`）。
 - **密钥长度要达标**：密钥字符串长度至少 32 个字符，否则启动会报 `WeakKeyException`。
 - **Jackson 兼容性**：如果你的项目里本来就有 Jackson（`spring-boot-starter-web` 自带了），`jjwt-jackson` 会和它自动配合，开箱即用。
+
+
