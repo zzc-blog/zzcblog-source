@@ -15,7 +15,7 @@ const TOTAL_COVERS = 62;
 // 用循环生成 URL 列表，简洁又容易改数量
 const coverPool = Array.from(
   { length: TOTAL_COVERS },
-  (_, i) => `https://img-proxy.zzc.dpdns.org/images/cover/${i + 1}.webp`
+  (_, i) => `https://img-proxy.zzc.dpdns.org/images/cover2/${i + 1}.webp`
 );
 
 // ---- Fisher-Yates 洗牌 ----

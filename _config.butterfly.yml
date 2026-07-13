@@ -48,21 +48,21 @@ avatar:
   effect: false
 
 disable_top_img: false
-default_top_img: https://img-proxy.zzc.dpdns.org/images/cover/2.webp
-index_img: https://img-proxy.zzc.dpdns.org/images/cover/20.webp
-archive_img: https://img-proxy.zzc.dpdns.org/images/cover/21.webp
-tag_img: https://img-proxy.zzc.dpdns.org/images/cover/15.webp
-category_img: https://img-proxy.zzc.dpdns.org/images/cover/30.webp
+default_top_img: https://img-proxy.zzc.dpdns.org/images/cover2/2.webp
+index_img: https://img-proxy.zzc.dpdns.org/images/cover2/20.webp
+archive_img: https://img-proxy.zzc.dpdns.org/images/cover2/21.webp
+tag_img: https://img-proxy.zzc.dpdns.org/images/cover2/15.webp
+category_img: https://img-proxy.zzc.dpdns.org/images/cover2/30.webp
 
-footer_img: https://img-proxy.zzc.dpdns.org/images/cover/3.webp
-background: https://img-proxy.zzc.dpdns.org/images/cover/45.webp
+footer_img: https://img-proxy.zzc.dpdns.org/images/cover2/3.webp
+background: https://img-proxy.zzc.dpdns.org/images/cover2/45.webp
 
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   default_cover:
-    - https://img-proxy.zzc.dpdns.org/images/cover/2.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover2/2.webp
 
 error_img:
   flink: /img/error-page.svg
@@ -71,7 +71,7 @@ error_img:
 error_404:
   enable: true
   subtitle: '页面没有找到...'
-  background: https://img-proxy.zzc.dpdns.org/images/cover/7.webp
+  background: https://img-proxy.zzc.dpdns.org/images/cover2/7.webp
 
 # ============================================================
 # 文章元数据 Post Meta
@@ -377,7 +377,7 @@ preloader:
   enable: true
   source: 1              # 1=双开门，加载完往两边摊开
   load_style: 'image'    # 关键：切到图片模式（内置 7 种：default/gear/ironheart/scarecrow/triangles/wizard/image）
-  load_image: 'https://img-proxy.zzc.dpdns.org/images/cover/20.webp'   # 你图床里的某一张，挑张暗色/氛围感的
+  load_image: 'https://img-proxy.zzc.dpdns.org/images/cover2/20.webp'   # 你图床里的某一张，挑张暗色/氛围感的
   pace_css_url:
 
 enter_transitions: true
@@ -541,7 +541,7 @@ css_prefix: true
 inject:
   head:
     - <link rel="preconnect" href="https://img-proxy.zzc.dpdns.org">
-    - <link rel="preload" href="https://img-proxy.zzc.dpdns.org/images/cover/20.webp" as="image">
+    - <link rel="preload" href="https://img-proxy.zzc.dpdns.org/images/cover2/20.webp" as="image">
     - <style>#footer,#footer a,#footer .copyright,#footer .framework-info,#footer .footer_custom_text{color:#FFFFFFB3}#footer a:hover{color:#49B1F5}</style>
     - <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js')})}</script>
   bottom:
