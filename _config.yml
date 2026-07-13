@@ -119,7 +119,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: /img/butterfly-icon.png
+  icon: /img/favicon.webp
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -130,6 +130,28 @@ skip_render:
   - 'CNAME'
   
   
+# https://github.com/theme-next/hexo-filter-optimize
+filter_optimize:
+  enable: true
+  # remove the surrounding comments in each of the bundled files
+  remove_comments: false
+  css:
+    # bundle loaded css file into the one
+    bundle: true
+    # use a script block to load css elements dynamically
+    delivery: true
+    # make specific css content inline into the html page
+    inlines:
+    excludes:
+  js:
+    # bundle loaded js file into the one
+    bundle: true
+    excludes:
+  # set the priority of this plugin,
+  # lower means it will be executed first, default is 10
+  priority: 12
+
+
 # https://github.com/RayKr/hexo-auto-front-matter
 auto_front_matter:
   enable: true

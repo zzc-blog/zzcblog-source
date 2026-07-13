@@ -195,7 +195,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: /img/butterfly-icon.png
+  icon: /img/favicon.webp
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -248,14 +248,14 @@ auto_front_matter:
     per_category:
       # 格式：父分类: { 子分类: 图片路径 }
       技术:
-        Java: /img/cover/cover-01.jpg
-        数据库: /img/cover/cover-05.jpg
-        前端: /img/cover/cover-25.jpg
-        工具: /img/cover/cover-01.jpg
-        其他: /img/cover/cover-06.jpg
+        Java: https://img-proxy.zzc.dpdns.org/images/cover/1.webp
+        数据库: https://img-proxy.zzc.dpdns.org/images/cover/5.webp
+        前端: https://img-proxy.zzc.dpdns.org/images/cover/25.webp
+        工具: https://img-proxy.zzc.dpdns.org/images/cover/1.webp
+        其他: https://img-proxy.zzc.dpdns.org/images/cover/6.webp
       生活:
-        随笔: /img/cover/cover-24.jpg
-        阅读: /img/cover/cover-27.jpg
+        随笔: https://img-proxy.zzc.dpdns.org/images/cover/24.webp
+        阅读: https://img-proxy.zzc.dpdns.org/images/cover/27.webp
 ```
 
 **package.json**
@@ -400,37 +400,37 @@ social:
 # ============================================================
 # 图片 Image
 # ============================================================
-favicon: /img/butterfly-icon.png
+favicon: /img/favicon.webp
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/avarte.webp
   effect: true
 
 disable_top_img: false
-default_top_img: /img/cover/cover-01.jpg
-index_img: /img/cover/cover-02.jpg
-archive_img: /img/cover/cover-03.png
-tag_img: /img/cover/cover-04.png
-category_img: /img/cover/cover-05.jpg
+default_top_img: https://img-proxy.zzc.dpdns.org/images/cover/1.webp
+index_img: https://img-proxy.zzc.dpdns.org/images/cover/2.webp
+archive_img: https://img-proxy.zzc.dpdns.org/images/cover/3.webp
+tag_img: https://img-proxy.zzc.dpdns.org/images/cover/4.webp
+category_img: https://img-proxy.zzc.dpdns.org/images/cover/5.webp
 
 footer_img: /img/footer-bg.svg
-background: /img/cover/cover-06.jpg
+background: https://img-proxy.zzc.dpdns.org/images/cover/6.webp
 
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   default_cover:
-    - /img/cover/cover-01.jpg
-    - /img/cover/cover-02.jpg
-    - /img/cover/cover-03.png
-    - /img/cover/cover-04.png
-    - /img/cover/cover-05.jpg
-    - /img/cover/cover-06.jpg
-    - /img/cover/cover-07.jpg
-    - /img/cover/cover-08.jpg
-    - /img/cover/cover-09.jpg
-    - /img/cover/cover-10.jpg
+    - https://img-proxy.zzc.dpdns.org/images/cover/1.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/2.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/3.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/4.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/5.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/6.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/7.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/8.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/9.webp
+    - https://img-proxy.zzc.dpdns.org/images/cover/10.webp
 
 error_img:
   flink: /img/error-page.svg
@@ -439,7 +439,7 @@ error_img:
 error_404:
   enable: true
   subtitle: '页面没有找到...'
-  background: /img/cover/cover-07.jpg
+  background: https://img-proxy.zzc.dpdns.org/images/cover/7.webp
 
 # ============================================================
 # 文章元数据 Post Meta
