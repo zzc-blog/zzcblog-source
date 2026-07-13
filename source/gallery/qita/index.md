@@ -7,9 +7,9 @@ type: gallery
 <div style="margin-bottom:16px"><a href="/gallery/" style="color:#49B1F5;text-decoration:none">← 返回图库</a></div>
 
 {% gallery %}
-![5](https://img-proxy.zzc.dpdns.org/images/cover2/5.webp)
-![7](https://img-proxy.zzc.dpdns.org/images/cover2/7.webp)
-![30](https://img-proxy.zzc.dpdns.org/images/cover2/30.webp)
-![50](https://img-proxy.zzc.dpdns.org/images/cover2/50.webp)
-![54](https://img-proxy.zzc.dpdns.org/images/cover2/54.webp)
+![5](/cover/5.webp)
+![7](/cover/7.webp)
+![30](/cover/30.webp)
+![50](/cover/50.webp)
+![54](/cover/54.webp)
 {% endgallery %}
