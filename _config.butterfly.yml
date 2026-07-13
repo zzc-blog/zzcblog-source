@@ -513,7 +513,7 @@ instantpage: true
 lazyload:
   enable: true
   native: true
-  field: site
+  field: post
   placeholder:
   blur: false
 
