@@ -6,7 +6,7 @@ type: gallery
 
 <div style="margin-bottom:16px"><a href="/gallery/" style="color:#49B1F5;text-decoration:none">← 返回图库</a></div>
 
-{% gallery false,50 %}
+{% gallery %}
 ![2](https://img-proxy.zzc.dpdns.org/images/cover2/2.webp)
 ![4](https://img-proxy.zzc.dpdns.org/images/cover2/4.webp)
 ![16](https://img-proxy.zzc.dpdns.org/images/cover2/16.webp)
